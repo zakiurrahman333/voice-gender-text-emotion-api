@@ -3,7 +3,8 @@ from fastapi.responses import JSONResponse
 import shutil
 import os
 from api.utils import predict_gender
-
+import uvicorn
+from api.main import app  # or just `from main import app` if no folder
 app = FastAPI()
 
 @app.post("/predict/")
@@ -20,3 +21,6 @@ async def predict(file: UploadFile = File(...)):
 
     os.remove(temp_path)
     return {"predicted_gender": gender}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=10000)
