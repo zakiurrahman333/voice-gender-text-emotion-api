@@ -23,7 +23,8 @@ def predict_gender(audio_path, model_path='gmm_gender_model.pkl'):
     female_score = model['female'].score(feat)
 
     gender = 'male' if male_score > female_score else 'female'
-    print(f"Predicted Gender: {gender}")
+    return gender  # <-- Add this line
+
 
 if __name__ == "__main__":
     # Replace this path with your test file

@@ -22,7 +22,6 @@ def extract_features(file_path):
     ])
     return combined
 
-
 def load_data(data_dir):
     features = []
     labels = []
@@ -34,7 +33,7 @@ def load_data(data_dir):
                 feat = extract_features(file_path)
                 features.append(feat)
                 labels.append(label)
-    return np.array(features), np.array(labels)
+    return np.array(features)
 
 def train_and_save_model(data_dir, model_path='gmm_gender_model.pkl'):
     X, y = load_data(data_dir)
