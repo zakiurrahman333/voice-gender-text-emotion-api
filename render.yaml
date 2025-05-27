@@ -1,10 +1,14 @@
 services:
   - type: web
-    name: fastapi-gender-predictor
+    name: fastapi-emotion-gender
     env: python
+    region: oregon
     plan: free
+    branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port 10000
     envVars:
       - key: MODEL_PATH
         value: gmm_gender_model.pkl
+      - key: PORT
+        value: 10000

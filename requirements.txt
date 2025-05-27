@@ -9,5 +9,6 @@ librosa==0.10.1
 scikit-learn==1.4.2
 joblib==1.4.2
 numpy==1.26.4
-
-
+transformers
+flask
+soundfile
