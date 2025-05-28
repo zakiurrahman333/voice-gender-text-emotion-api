@@ -31,3 +31,4 @@ async def gender_predict(file: UploadFile = File(...)):  # ✅ Accept audio file
         "gender": result
     }
 
+# used this on browser  http://localhost:9000/docs#/default/gender_predict_gender_predict_post 
