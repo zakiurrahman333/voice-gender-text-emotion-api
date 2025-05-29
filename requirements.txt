@@ -6,9 +6,9 @@ pydantic_core==2.33.2
 torch==2.2.2
 torchaudio==2.2.2
 librosa==0.10.1
-scikit-learn==1.4.2
+scikit-learn==1.6.1
 joblib==1.4.2
 numpy==1.26.4
-transformers
-flask
-soundfile
+transformers==4.40.1
+flask==3.0.3
+soundfile==0.12.1
